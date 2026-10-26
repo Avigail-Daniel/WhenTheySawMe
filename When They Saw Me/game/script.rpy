@@ -11,6 +11,9 @@ define Vic = Character("Vic")
 
 define RandoOL = Character("Random OL")
 define Unknown = Character("???")
+
+default goneClimbing = False
+default vicIsHere = False
 # The game starts here.
 
 label start:
@@ -76,43 +79,65 @@ label startPrototypeScenario:
         "Go rock climbing with Gavyn?"
 
         "Yes (+❤ Gavyn)":
-            jump GoRockClimbing
+            $ goneClimbing = True
 
         "No (-❤ Gavyn)":
-            jump GoPainting
-
-
-label GoRockClimbing:
+            $ goneClimbing = False
     
-    scene SCENE 3
+    jump InviteVic
 
-    # Continue from the previous choice where Logan agrees to go.
+label InviteVic:
 
-    Logan "Em… ok… Sure, I can go with you…"
+    if goneClimbing:
+        Logan "Em… ok… Sure, I can go with you…"
 
-    Gavyn "ALRIGHT!!! :) See you there!"
+        Gavyn "ALRIGHT!!! :) See you there!"
 
-    Logan "{i}Might just be awkward if it's just the two of us…{/i}"
+        Logan "{i}I feel a tug at my heart.{/i}"
 
-    Logan "Hey Vic, do you want to come rock climbing with me at the athletics center?"
+        Logan "{i}Probably just because I was looking forward to painting.{/i}"
 
-    vic "I could go. I've also been eying this talent show thing and kinda want to see what blackmail I can get on my upperclassmen."
+        Logan "{i}Still, it might be awkward if it’s just the two of us…{/i}"
 
-    vic "I can come with you if you want, but a guy/gal needs to survive in this world and the best way to do it is to have a leg up on everyone you meet."
+        Logan "{i}Maybe my roommate wants to join us?{/i}"
+
+        Logan "Hey Vic, do you want to come rock climbing with me at the athletics center?"
+   
+    else:
+        Logan "Sorry, but I would really prefer to go painting. I hope you have fun rock climbing though!"
+
+        Gavyn "Rock climbing is better. You’re a boring person."
+
+        Logan "Maybe we’ll go climbing next time?"
+
+        Gavyn "Sure, I guess…"
+
+        Logan "{i}I guess it’s too bad that Gavyn didn’t want to come.{/i}"
+
+        Logan "{i}Still… I probably shouldn’t go alone to this thing…{/i}"
+
+        Logan "{i}Maybe I’ll invite my roommate…{/i}"
+
+        Logan "Hey Vic, do you want to come to the orientation art event with me? Looks like it could be cool"
+    #could be cool if we added a moment here where gavyn is texiting you at the same time that you are waiting for a response from vic 
+    #Gavyn "I'm excited to get to know each other better"
+
+    Vic "I could go. I’ve also been eying this talent show thing and kinda want to see what blackmail I can get on my upperclassmen."
+
+    Vic "I can come with you if you want, but a guy/gal needs to survive in this world and the best way to do it is to have a leg up on everyone you meet."
 
     menu:
         "Invite Vic?"
 
         "Yes (-❤ Gavyn, +❤ Vic)":
-            jump ClimbingWithBoth
+            $ vicIsHere = True
+            jump VicComes
 
         "No (+❤ Gavyn)":
-            jump ClimbingJustGavyn
+            $ vicIsHere = False
+            jump NoVic
 
-label ClimbingWithBoth:
-    
-    scene SCENE 4
-
+label VicComes:
     Logan "Yeah, I’d love for you to come. Gives us a chance to spend some quality time together."
 
     Vic "Sounds excellent. But if it’s boring, I’m ditching for the talent show."
@@ -125,71 +150,44 @@ label ClimbingWithBoth:
 
     Logan "Good to kn- wait eight?!"
 
-    Vic "TO THE ROCK CLIMBING PLACE!"
+    if goneClimbing:
+        Vic "TO THE ROCK CLIMBING PLACE!"
 
-    Logan "It’s at the athletics center."
+        Logan "It’s at the athletics center."
 
-    Vic "TO THE ATHLETICS CENTER!"
+        Vic "TO THE ATHLETICS CENTER!"
+        
+    else:
+        Vic "TO THE FUNKY PAINTING THING!"
 
-    Logan "{i}Vic and I spent the entire walk to the athletics center just chatting about our orientation groups and the people in them. When we arrived, it looked exactly like you would expect an athletics center would look like.{/i}"
+label NoVic:
+    Logan "Haha, I totally get it"
+    Logan "Go have fun! Make sure to share whatever you learn with me!"
 
-    Logan "{i}We hunted down the rock climbing room and it was massive. Just about every surface was covered in hand holds, with the only exception being the floor as it was covered in cushioning.{/i}"
+    Vic "Sounds good! Text me if you need me."
 
-    Logan "{i}Lines of people extended out and into the weight lifting area, with various OLs giving safety talks to people just joining the lines and having them sign waivers.{/i}"
+    if goneClimbing:
+        Logan "I'm off to command gravity!"
+        jump climbingAlone
 
-    Unknown "Hey! Logan!"
-
-    Logan "{i}Just nearly at the front of the line is Gavyn, wearing as much Under Armor clothing as one could possibly fit on their body. He reaches out one Under Armor clad arm and waives it somewhat violently to get our attention.{/i}"
-
-    Gavyn "Hey Logan! I saved you a spot in line!"
-
-    OL "Yeah… um… that’s not a thing here."
-
-    Gavyn "Oh, really?"
-
-    Logan "{i}Gavyn quickly left the line and approached us, a roar of joy could be heard as the line moved up.{/i}"
-
-    Gavyn "There! Now I can be with you. Hug?"
-
-    Vic "Coulda told me he was a hugger. Hi, I’m Victorious, Logan’s roommate. Call me Vic."
-
-    Gavyn "Nice to meet you Vic. As you can tell, I’m Gavyn, with a 'y'!"
-
-    Vic "As opposed to what, a 'g'?"
-
-    Gavyn "No, an 'i'. Are you stupid?"
-
-    Vic "It’s a joke, dingus. Take it or leave it."
-
-    Gavyn "It wasn’t very funny…"
-
-    Vic "Leave it, it is."
-
-    Logan "Alright, since both of you have met, should we hop into line?"
-
-    Gavyn "Off we go!"
-
-    Logan "{i}All three of us got into line and an OL approached us, ready to give us the safety talk and make us sign waivers. Vic seemed to be pretty excited to try to climb everything, and Gavyn kept saying he was the 'worst' at rock climbing.{/i}"
-
-    Gavyn "I couldn’t even climb out of a hole I dug myself into."
-
-    Vic "Then why did you invite Logan, and by extension me, to this?"
-
-    Gavyn "God, I’m the worst."
-
-    Logan "{i}After about 20 minutes of waiting, Vic broke.{/i}"
-
-    Vic "Alright, I’m bored. I’m gonna go see what inane crap qualifies for a 'talent' and how much of it I can use for blackmail. Have fun rock climbing you two!"
-
-    Logan "Alright, bye Vic."
-
-    Gavyn "Bye.."
-
-    Logan "{i}5 more minutes passed and we were finally able to rock out and climb. As we were heading in, Gavyn stopped and stood still for a few seconds.{/i}"
+    else:
+        Logan "I'm off to go make my *materpiece*"
+        jump paintingAlone
 
 
-label GoPainting:
+label climbingWithBoth:
+# Logan is going rock climbing with Gavyn 
+# Vic has agreed to come
 
-    # TODO: Add the scene for choosing not to go rock climbing.
+label climbingAlone:
+# Logan is going rock climbing with Gavyn.
+# Vic is not here 
 
-    return
+label paintingWithBoth:
+# Logan is going painging with Vic 
+# Gavyn surprises them  there
+
+label paintingAlone:
+# Logan is going painting entirely alone 
+# Gavyn surprises her there
+
