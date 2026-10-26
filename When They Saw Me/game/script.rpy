@@ -31,39 +31,55 @@ label startPrototypeScenario:
 
     scene SCENE 1
 
-    Logan "God, orientation has been a lot."
-    Logan "At least Gregory said tonight's activities are interesting."
+    Logan "Bye! See you guys tomorrow!"
 
-    Logan "{i}I scanned all of the options from the list they had sent us. There's rock climbing over at the athletics center, a talent show being put on by the OLs, a movie night at the art building, and… OOH!{/i}"
+    Logan "{i}I can feel a sort of buzz in my head as I walk away from my orientation group.{/i}"
 
-    Logan "{i}There's a 'painting with a twist' event!{/i}"
+    Logan "{i}Socializing with people for so long makes me feel like I've been jostled around in a pin-ball machine.{/i}"
+
+    Logan "{i}Gregory told me that tonight’s activities would be interesting, though, and that it would be a good place to meet people.{/i}"
+
+    Logan "{i}It’s sort of the last thing I feel like doing, but I know I’ve gotta keep going if I want to have any friends in college.{/i}"
+
+    Logan "{i}I scanned all of the options from the list they had sent us. There’s rock climbing at the athletics center, a talent show being put on by the OLs, a movie night at the art building, and… OOH!{/i}"
+
+    Logan "{i}There’s a 'painting with a twist' event!{/i}"
 
     Logan "{i}Last time I did something like this, the twist was we could only paint with our fingers.{/i}"
 
-    Logan "{i}Granted, I was in middle school, but maybe it's now something cool, like spray painting or paint ball. Or better yet, spray-and-pray paintball painting.{/i}"
+    Logan "{i}Granted, I was in middle school, but maybe it’s now something cool, like spray painting or paint ball. Or better yet, spray-and-pray paintball painting.{/i}"
 
     "*vttt! vttt!*"
 
     Logan "{i}And it looks like someone wants my attention.{/i}"
 
-    scene SCENE 2 #Logan looks at their phone
-    
-    Logan "{i}Oh, it's Gavyn.{/i}"
+    Logan "{i}Oh, it’s Gavyn.{/i}"
+
+    scene SCENE 2
 
     Gavyn "Hey Logan! I was thinking about going to the rock climbing thing tonight. Do you want to come with me?"
 
-    Logan "I really wanted to check out the painting event tonight…"
+    Logan "{i}I don’t care much for rock climbing… and it doesn’t feel like the right activity to do with a guy I just met.{/i}"
+
+    menu:
+        "How should I respond?"
+
+        "I don’t feel like rock climbing… and besides, I already decided to go to the painting event.":
+            Logan "{i}Maybe that was a little harsh...{/i}"
+        "I sort of had my eye on this one painting event… Do you want to come with me to that instead?":
+            Logan "{i}I hope my offer doesn't sound inauthentic{/i}"
 
     Gavyn "I think you should come with me to rock climbing, it'll be fun."
 
+    Logan "{i}I guess… I don’t hAve to go to the painting event…{/i}"
     menu:
-        "Go rock climbing with Gavyn?":
+        "Go rock climbing with Gavyn?"
 
-            "Yes (+❤ Gavyn)":
-                jump GoRockClimbing
+        "Yes (+❤ Gavyn)":
+            jump GoRockClimbing
 
-            "No (-❤ Gavyn)":
-                jump GoPainting
+        "No (-❤ Gavyn)":
+            jump GoPainting
 
 
 label GoRockClimbing:
@@ -85,13 +101,13 @@ label GoRockClimbing:
     vic "I can come with you if you want, but a guy/gal needs to survive in this world and the best way to do it is to have a leg up on everyone you meet."
 
     menu:
-        "Invite Vic?":
+        "Invite Vic?"
 
-            "Yes (-❤ Gavyn, +❤ Vic)":
-                jump ClimbingWithBoth
+        "Yes (-❤ Gavyn, +❤ Vic)":
+            jump ClimbingWithBoth
 
-            "No (+❤ Gavyn)":
-                jump ClimbingJustGavyn
+        "No (+❤ Gavyn)":
+            jump ClimbingJustGavyn
 
 label ClimbingWithBoth:
     
