@@ -156,9 +156,11 @@ label VicComes:
         Logan "It’s at the athletics center."
 
         Vic "TO THE ATHLETICS CENTER!"
+        jump GoRockClimbing
         
     else:
         Vic "TO THE FUNKY PAINTING THING!"
+        jump GoPainting
 
 label NoVic:
     Logan "Haha, I totally get it"
@@ -168,26 +170,29 @@ label NoVic:
 
     if goneClimbing:
         Logan "I'm off to command gravity!"
-        jump climbingAlone
+        jump GoRockClimbing
 
     else:
         Logan "I'm off to go make my *materpiece*"
-        jump paintingAlone
+        jump GoPainting
 
 
-label climbingWithBoth:
+label GoRockClimbing:
 # Logan is going rock climbing with Gavyn 
 # Vic has agreed to come
-
-label climbingAlone:
+# OR
 # Logan is going rock climbing with Gavyn.
-# Vic is not here 
+# Vic is not here
 
-label paintingWithBoth:
+    scene GoRockClimbing
+
+    
+
+
+label GoPainting:
 # Logan is going painging with Vic 
 # Gavyn surprises them  there
-
-label paintingAlone:
+# OR 
 # Logan is going painting entirely alone 
 # Gavyn surprises her there
 
