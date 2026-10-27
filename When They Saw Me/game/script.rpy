@@ -527,17 +527,22 @@ label DodgeComment:
 
     Logan "Oh, I guess."
 
+    jump GottaGo
+
 label GottaGo:
 
     Logan "{i}After some awkward silence, I decided I should just leave.{/i}"
 
     menu:
+        "Leaving Gavyn early sends an ache looming over my shoulders..."
+
         "Make up an excuse (+❤ Gavyn)":
             Logan "…hey Gavyn, I think I forgot to fill out something for my RA. I think I need to head out."
 
         "Tell the ugly truth (-❤ Gavyn)":
             Logan "… hey Gavyn, I’m getting a bit tired and I think it’s time to go home."
-        Gavyn "Oh… ok."
+        
+    Gavyn "Oh… ok."
 
     Logan "{i}He seems upset, but I can’t really tell.{/i}"
 
@@ -560,7 +565,7 @@ label CA:
     Gavyn "Aw, come on, the conversation was just getting interesting…"
 
     menu:
-        "Shouold I keep hanging out with Gavyn?"
+        "Should I keep hanging out with Gavyn?"
 
         "Yes (+❤ Gavyn)":
             jump CA
