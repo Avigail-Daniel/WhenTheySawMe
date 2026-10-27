@@ -184,10 +184,115 @@ label GoRockClimbing:
 # Logan is going rock climbing with Gavyn.
 # Vic is not here
 
-    scene GoRockClimbing
+    scene Rock Climbing
 
+    if vicIsHere:
+        Logan "{i}Vic and I spent the entire walk to the athletics center just chatting about our orientation groups and the people in them. When we arrived, it looked exactly like you would expect an athletics center would look like.{/i}"
+
+        Logan "{i}We hunted down the rock climbing room and it was massive. Just about every surface was covered in hand holds, with the only exception being the floor as it was covered in cushioning.{/i}"
+    else:
+        Logan "{i}I spent the entire walk to the athletics center thinking about my orientation group and the people in it. When I arrived, it looked exactly like I would have expected it to.{/i}"
+
+        Logan "{i}I hunted down the rock climbing room and it was massive. Just about every surface was covered in hand holds, with the only exception being the floor as it was covered in cushioning.{/i}"
     
+    Logan "{i}Lines of people extended out and into the weight lifting area, with various OLs giving safety talks to people just joining the lines and having them sign waivers.{/i}"
 
+    Unknown "Hey! Logan!"
+
+    Logan "{i}Just nearly at the front of the line is Gavyn, wearing as much Under Armor clothing as one could possibly fit on their body. He reaches out one Under Armor clad arm and waves it somewhat violently to get my attention.{/i}"
+
+    Gavyn "Hey Logan! I saved you a spot in line!"
+
+    OL "Yeah… um… that’s not a thing here."
+
+    Gavyn "Oh, really?"
+
+    Logan "{i}Gavyn quickly left the line and approached me, a roar of joy could be heard as the line moved up.{/i}"
+
+   # What took you so long
+   
+    Gavyn "What took you so long?"
+
+    Logan "Um, nothing… I walked over here as soon as I could."
+
+    Gavyn "Well you made me wait for you to climb."
+
+    Logan "Oh, I’m sorry."
+
+    Logan "Well… at least we don’t have to wait any longer?"
+
+    Gavyn "Yeah…"
+
+    #Awkward with vic 
+
+    if vicIsHere:
+        Gavyn "Who is this?"
+
+        Logan "This is my roommate, Vic."
+
+        Logan "I asked her to join us."
+
+        Logan "{i}Gavyn doesn’t say anything…{/i}"
+
+        Logan "{i}I had a feeling this would upset him.{/i}"
+
+        Logan "{i}Maybe I should have let him know sooner that Vic was joining us.{/i}"
+
+        Vic "Hey! Nice to meet you!"
+
+        Gavyn "…"
+
+        Vic "What’s your name?"
+
+        Gavyn "I’m Gavyn."
+
+        Vic "Nice to meet you Gavin!"
+
+        Gavyn "With a 'y'... You have to say it with a 'y'."
+
+        Vic "As opposed to what, a 'g'?"
+
+        Gavyn "No, an 'i'. Are you stupid?"
+
+        Vic "It’s a joke, dingus. Take it or leave it."
+
+        Gavyn "…"
+
+        Vic "Leave it, it is."
+
+        Logan "{i}Alright{/i}, since both of you have met, should we hop into line?"
+
+        Vic "Yeah!"
+
+        Logan "{i}Gavyn doesn’t seem to like Vic… maybe inviting her was a mistake.{/i}"
+        Logan "{i}All three of us got into line and an OL approached us, ready to give us the safety talk and make us sign waivers. Vic seemed to be pretty excited to try to climb everything, and Gavyn kept saying he was the “worst” at rock climbing.{/i}"
+
+    Gavyn "I couldn’t even climb out of a hole I dug myself into."
+
+    Logan "Then why’d you want to come? Are you trying to get better at it?"
+
+    Gavyn "No."
+
+    Logan "Oh…"
+
+    Logan "{i}Vic gives me a confused look which I reciprocate.{/i}"
+
+    Logan "{i}That is strange, right? But maybe I’m being too harsh on someone I just met.{/i}"
+
+    if vicIsHere:
+        Logan "{i}Aside from the ambiance of the gym and the occasional comment from Vic, we stood in total silence.{/i}"
+
+        Logan "{i}I was just thinking about how much longer this would take when Vic finally broke.{/i}"
+
+        Vic "Alright, if you don’t mind, we’ve been standing here for ages now and I’m bored. I’m gonna go see what inane crap qualifies for a 'talent' and how much of it I can use for blackmail. Have fun rock climbing you two!"
+
+        Logan "Oh, ok… bye, Vic!"
+
+        Gavyn "Bye."
+
+        Logan "{i}Tension grips my chest as I watch her walk away.{/i}"
+
+    jump AloneAtLast
 
 label GoPainting:
 # Logan is going painging with Vic 
@@ -196,3 +301,5 @@ label GoPainting:
 # Logan is going painting entirely alone 
 # Gavyn surprises her there
 
+label AloneAtLast:
+    
