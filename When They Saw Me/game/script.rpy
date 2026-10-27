@@ -125,17 +125,28 @@ label InviteVic:
     Vic "I could go. I’ve also been eying this talent show thing and kinda want to see what blackmail I can get on my upperclassmen."
 
     Vic "I can come with you if you want, but a guy/gal needs to survive in this world and the best way to do it is to have a leg up on everyone you meet."
+    if goneClimbing:
+        menu:
+            "Invite Vic?"
 
-    menu:
-        "Invite Vic?"
+            "Yes (-❤ Gavyn, +❤ Vic)":
+                $ vicIsHere = True
+                jump VicComes
 
-        "Yes (-❤ Gavyn, +❤ Vic)":
-            $ vicIsHere = True
-            jump VicComes
+            "No (+❤ Gavyn)":
+                $ vicIsHere = False
+                jump NoVic
+    else:
+        menu:
+            "Invite Vic?"
 
-        "No (+❤ Gavyn)":
-            $ vicIsHere = False
-            jump NoVic
+            "Yes (+❤ Vic)":
+                $ vicIsHere = True
+                jump VicComes
+
+            "No":
+                $ vicIsHere = False
+                jump NoVic
 
 label VicComes:
     Logan "Yeah, I’d love for you to come. Gives us a chance to spend some quality time together."
@@ -459,4 +470,4 @@ else:
 
 
 label AloneAtLast:
-    Narrator "This is the scene where Gavyn will comment on logan's legs"
+    N "This is the scene where Gavyn will comment on logan's legs"
