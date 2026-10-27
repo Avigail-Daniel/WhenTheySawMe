@@ -383,10 +383,6 @@ label GoPainting:
 
         Logan "{i}Gavyn doesn’t say anything…{/i}"
 
-        Logan "{i}I had a feeling this would upset him.{/i}"
-
-        Logan "{i}Maybe I should have let him know sooner that Vic was joining us.{/i}"
-
         Vic "Hey! Nice to meet you!"
 
         Gavyn "…"
