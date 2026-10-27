@@ -9,11 +9,14 @@ define Gavyn = Character("Gavyn")
 define Logan = Character("Logan")
 define Vic = Character("Vic")
 
-define RandoOL = Character("Random OL")
+define GregOL = Character("OL Gregory")
 define Unknown = Character("???")
 
 default goneClimbing = False
 default vicIsHere = False
+
+default beenHereOnce = False
+
 # The game starts here.
 
 label start:
@@ -154,12 +157,12 @@ label VicComes:
     Vic "Sounds excellent. But if it’s boring, I’m ditching for the talent show."
 
     Logan "Yeah that’s fair."
+    if goneClimbing:
+        Logan "By the way, someone from my orientation group is probably going to join us… is that ok? He invited me and I figured it might be good to introduce the two of you."
+    
+        Vic "Logan, here’s a little secret I learned while trying to get through eight different high schools over the course of three years: you can never have too many friends."
 
-    Logan "By the way, someone from my orientation group is probably going to join us… is that ok? He invited me and I figured it might be good to introduce the two of you."
-
-    Vic "Logan, here’s a little secret I learned while trying to get through eight different high schools over the course of three years: you can never have too many friends."
-
-    Logan "Good to kn- wait eight?!"
+        Logan "Good to kn- wait eight?!"
 
     if goneClimbing:
         Vic "TO THE ROCK CLIMBING PLACE!"
@@ -214,7 +217,7 @@ label GoRockClimbing:
 
     Gavyn "Hey Logan! I saved you a spot in line!"
 
-    OL "Yeah… um… that’s not a thing here."
+    GregOL"Yeah… um… that’s not a thing here."
 
     Gavyn "Oh, really?"
 
@@ -315,13 +318,13 @@ label GoPainting:
 # Logan is going painting entirely alone 
 # Gavyn surprises her there
 
-if vicIsHere:
-    Logan "{i}Vic and I spent the entire walk to the paintng event just chatting about our orientation groups and the people in them.{/i}"
+    if vicIsHere:
+        Logan "{i}Vic and I spent the entire walk to the paintng event just chatting about our orientation groups and the people in them.{/i}"
 
-    Logan "{i}We got there and it looked pretty packed. I’m surprised that they could fit all of us into this one lecture hall. At the foot of it was a table covered in various painting supplies.{/i}"
-else:
-    Logan "{i}I spent the entire walk to the painting event thinking about my orientation group and the people in it.{/i}"
-    Logan "{i}I got there and it looked pretty packed. I’m surprised that they could fit all of us into this one lecture hall. At the foot of it was a table covered in various painting supplies.{/i}"
+        Logan "{i}We got there and it looked pretty packed. I’m surprised that they could fit all of us into this one lecture hall. At the foot of it was a table covered in various painting supplies.{/i}"
+    else:
+        Logan "{i}I spent the entire walk to the painting event thinking about my orientation group and the people in it.{/i}"
+        Logan "{i}I got there and it looked pretty packed. I’m surprised that they could fit all of us into this one lecture hall. At the foot of it was a table covered in various painting supplies.{/i}"
 
 # The Cringey OL Dance 
     Logan "{i}I spot Gregory, my OL, from across the room and snicker a bit to myself.{/i}"
@@ -330,7 +333,7 @@ else:
 
     Logan "{i}In an instant, his head swerved towards me, with a look screaming a sassy ‘oh no you didn’t’.{/i}"
 
-    Gregory "No stinkin’ way!"
+    GregOL "No stinkin’ way!"
 
     Logan "I SAID"
 
@@ -338,7 +341,7 @@ else:
 
     Logan "{i}He looked at me, sighed, and followed through with the orientation tradition they told us about.{/i}"
 
-    Gregory "Ok!"
+    GregOL "Ok!"
 
     Logan "{i}What followed can only be described as “cringe-worthy dance sesh”.{/i}"
 
@@ -346,11 +349,11 @@ else:
 
     Logan "{i}After… that disaster happened, he walked up to me, eager to do something else that wasn’t dancing in front of a crowd of onlookers.{/i}"
 
-    Gregory "So did you come here just to spoil my evening or do you actually plan on painting?"
+    GregOL "So did you come here just to spoil my evening or do you actually plan on painting?"
 
     Logan "Yeah, I’m here to paint! Has anyone else from the group shown up yet??"
 
-    Gregory "Yeah Gavyn’s around here somewhere. I think- oh there he is. He’s in the back row."
+    GregOL "Yeah Gavyn’s around here somewhere. I think- oh there he is. He’s in the back row."
 
     Logan "Oh… He’s here?"
 
@@ -370,7 +373,7 @@ else:
     Logan "I mean… I guess… Just cause you said you were going to go rock climbing."
 
     Logan "{i}Gavyn waves his hand at me dismissively.{/i}"
-# Gavyn and Vic Meet 
+    # Gavyn and Vic Meet 
     if vicIsHere:
         Gavyn "Who is this?"
 
@@ -408,14 +411,14 @@ else:
 
         Logan "{i}Gavyn doesn’t seem to like Vic…{/i}"
 
-# Event intro 
-    Logan "{i}After a few minutes, the person running the event grabbed a microphone.{/i}"
+    # Event intro 
+        Logan "{i}After a few minutes, the person running the event grabbed a microphone.{/i}"
 
-    Organizer "Alright everyone, welcome to the Painting With A Twist event for Orientation 2024! Woooo!"
+        GregOL "Alright everyone, welcome to the Painting With A Twist event for Orientation 2024! Woooo!"
 
-    Logan "{i}No one cheered.{/i}"
+        Logan "{i}No one cheered.{/i}"
 
-    Organizer "Oooh-kay. Looks like no one’s excited for the twist. Well, there’s supplies up at the front of the room, and it seems like my co-organizers are setting up food at the back of the room. So help yourself and let’s make some art!"
+        GregOL "Oooh-kay. Looks like no one’s excited for the twist. Well, there’s supplies up at the front of the room, and it seems like my co-organizers are setting up food at the back of the room. So help yourself and let’s make some art!"
 
 # The gang starts to paint 
 
@@ -466,8 +469,149 @@ else:
 
     Logan "It’s fine! I’m sure you’re better than you think!"
 
-
-
-
 label AloneAtLast:
-    N "This is the scene where Gavyn will comment on logan's legs"
+    Logan "{i}Gavyn is suddenly staring a bit more intensely at me.{/i}"
+
+    Logan "Everything good?"
+
+    Gavyn "Yeah… you know you waddle when you walk, right?"
+
+    Logan "…what?"
+
+    Gavyn "Yeah, you…"
+
+    Logan "{i}He then went and mimicked how I walked, almost like a cartoonish version of it.{/i}"
+
+    Logan "{i}I know what he’s talking about, but I’m not sure how to react.{/i}"
+
+    menu:
+        "I know what he’s talking about, but I’m not sure how to react"
+
+        "There’s actually a reason why that happens… (+❤ Gavyn)":
+            jump TellThestory
+
+        "*Say nothing* (-❤ Gavyn)":
+            jump DodgeComment
+
+label TellThestory:
+    Logan "So, the thing about my legs,"
+
+    Logan "{i}I squat down and then stand up and bend my knees.{/i}"
+
+    Logan "You see how my knees are bending just fine, but my feet are turned out?"
+
+    Logan "{i}I then turn my feet to face forwards, and bend my knees once more.{/i}"
+
+    Logan "And now that my knees are facing forward, my knees are clacking into each other."
+
+    Logan "It has to do with my hip rotation, I’ve been like this since I was a kid."
+
+    Gavyn "Um… no…"
+
+    Gavyn "It’s because you have such large thighs. If you lose the fat there, you’ll be able to walk properly."
+
+    Logan "…"
+
+    Gavyn "Maybe you need to ease up on whatever you’re eating. You’re supposed to have a small gap between your legs."
+
+    Logan "Oh, I guess."
+
+    jump GottaGo
+
+label DodgeComment:
+    Logan "Haha… ha… yeah. That does kind of look like how I walk."
+
+    Gavyn "Yeah, it might be because you have such large thighs. If you lose the fat there, you’ll be able to walk properly."
+
+    Logan "…"
+
+    Gavyn "Maybe you need to ease up on whatever you’re eating. You’re supposed to have a small gap between your legs."
+
+    Logan "Oh, I guess."
+
+label GottaGo:
+
+    Logan "{i}After some awkward silence, I decided I should just leave.{/i}"
+
+    menu:
+        "Make up an excuse (+❤ Gavyn)":
+            Logan "…hey Gavyn, I think I forgot to fill out something for my RA. I think I need to head out."
+
+        "Tell the ugly truth (-❤ Gavyn)":
+            Logan "… hey Gavyn, I’m getting a bit tired and I think it’s time to go home."
+        Gavyn "Oh… ok."
+
+    Logan "{i}He seems upset, but I can’t really tell.{/i}"
+
+    Gavyn "Are you sure? Don’t you want to keep hanging out with me?"
+
+    menu:
+        "Should I consider his offer and keep hanging out?"
+
+        "Yes (+❤ Gavyn)":
+            jump CA
+
+        "No (-❤ Gavyn)":
+            jump CB
+
+label CA:
+    Logan "Yeah sure, what’s a few more minutes?"
+
+    Logan "{i}I hang out with him for a few more minutes before thinking it might be time for me to head back.{/i}"
+
+    Gavyn "Aw, come on, the conversation was just getting interesting…"
+
+    menu:
+        "Shouold I keep hanging out with Gavyn?"
+
+        "Yes (+❤ Gavyn)":
+            jump CA
+
+        "No (-❤ Gavyn)":
+            if beenHereOnce:
+                jump TheFinalNail
+            else:
+                $ beenHereOnce = True
+                jump CB
+
+label CB:
+    
+    Logan "No thanks, I just want to head home."
+
+    Gavyn "Why?"
+
+    Logan "Honestly, I think my day is just done. I need to get some sleep."
+
+    Gavyn "Sleep for what?"
+
+    Logan "I’ve got things to do tomorrow, and I’d like to be well rested for them."
+
+    Gavyn "But it’s orientation week…"
+
+    Logan "I know… orientation week is pretty busy."
+
+    Logan "{i}I’m pretty sure he just rolled his eyes at me.{/i}"
+
+    Gavyn "You’re only going to get busier. Stay with me for just a little longer."
+
+    menu:
+        "Yes (+❤ Gavyn)":
+            jump CA
+
+        "No (-❤ Gavyn)":
+            jump TheFinalNail
+
+label TheFinalNail:
+    Logan "I think I really should head to bed… we’ll get to see each other more tomorrow."
+
+    Gavyn "Sure we will."
+
+    Gavyn "Have a good rest of your night."
+
+    Logan "{i}I leave, heading back to my dorm.{/i}"
+
+    Logan "{i}It was an eventful day to say the least.{/i}"
+
+    Logan "{i}I hope I left a good impression on everyone today.{/i}"
+
+    return
