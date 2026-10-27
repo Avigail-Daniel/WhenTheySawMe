@@ -209,7 +209,7 @@ label GoRockClimbing:
 
     Logan "{i}Gavyn quickly left the line and approached me, a roar of joy could be heard as the line moved up.{/i}"
 
-   # What took you so long
+    # What took you so long
    
     Gavyn "What took you so long?"
 
@@ -284,7 +284,7 @@ label GoRockClimbing:
 
         Logan "{i}I was just thinking about how much longer this would take when Vic finally broke.{/i}"
 
-        Vic "Alright, if you don’t mind, we’ve been standing here for ages now and I’m bored. I’m gonna go see what inane crap qualifies for a 'talent' and how much of it I can use for blackmail. Have fun rock climbing you two!"
+        Vic "Alright, if you don’t mind, we’ve been standing here for ages now and I’m bored. I’m gonna go see what inane crap qualifies for a 'talent' and how much of it I can use for blackmail. Have fun rock climbing, you two!"
 
         Logan "Oh, ok… bye, Vic!"
 
@@ -300,6 +300,64 @@ label GoPainting:
 # OR 
 # Logan is going painting entirely alone 
 # Gavyn surprises her there
+
+if vicIsHere:
+    Logan "{i}Vic and I spent the entire walk to the paintng event just chatting about our orientation groups and the people in them.{/i}"
+
+    Logan "{i}We got there and it looked pretty packed. I’m surprised that they could fit all of us into this one lecture hall. At the foot of it was a table covered in various painting supplies.{/i}"
+else:
+    Logan "{i}I spent the entire walk to the painting event thinking about my orientation group and the people in it.{/i}"
+    Logan "{i}I got there and it looked pretty packed. I’m surprised that they could fit all of us into this one lecture hall. At the foot of it was a table covered in various painting supplies.{/i}"
+
+# The Cringey OL Dance 
+
+
+# Event intro 
+    Logan "{i}After a few minutes, the person running the event grabbed a microphone.{/i}"
+
+    Organizer "Alright everyone, welcome to the Painting With A Twist event for Orientation 2024! Woooo!"
+
+    Logan "{i}No one cheered.{/i}"
+
+    Organizer "Oooh-kay. Looks like no one’s excited for the twist. Well, there’s supplies up at the front of the room, and it seems like my co-organizers are setting up food at the back of the room. So help yourself and let’s make some art!"
+
+# The gang starts to paint 
+
+if vicIsHere:
+        Logan "{i}Just as soon as they said that, just about everyone started clambering for the free food, so the three of us went to the front of the other line to grab supplies. Vic grabbed a whole set of various colors and brushes with a canvas slung under their arm, Gavyn grabbed some water colors and the corresponding paper, and I settled for the standard canvas and brush.{/i}"
+
+    Logan "{i}We then went to some table in some corner somewhere. Vic seemed to be pretty excited to paint and couldn’t decide on a subject, I settled on trying to do a landscape of some fantasy location, and Gavyn kept saying he was the “worst” at art.{/i}"
+
+    Gavyn "I couldn’t even draw the person I was in love with if they went missing."
+
+    Vic "Then why did you skip rock climbing to come with us to this?"
+
+    Logan "{i}Gavyn keeps his head down, ignoring her.{/i}"
+
+    Logan "{i}Vic gives me a strange look which I reciprocate.{/i}"
+
+    Logan "If you don’t like it so much you don’t have to paint…"
+
+    Logan "And besides, the only way to get better is to keep painting."
+
+    Logan "{i}He gives me a confused and almost disgusted look… Like I was stupid for even suggesting such a thing.{/i}"
+
+    Logan "It’s fine! I’m sure you’re better than you think!"
+
+    Logan "{i}Aside from the ambiance of the room and the occasional comment from Vic, we painted in total silence.{/i}"
+
+    Logan "{i}I was just thinking about how much longer the event would last when Vic finally broke.{/i}"
+
+    Vic "Alright, if you don’t mind, we’ve been sitting here for ages now and I’m bored. I’m gonna go see what inane crap qualifies for a “talent” and how much of it I can use for blackmail. Have fun painting, you two!"
+
+    Logan "Oh, ok… bye, Vic!"
+
+    Gavyn "Bye."
+
+    Logan "{i}Tension grips my chest as I watch her walk away.{/i}"
+
+
+
 
 label AloneAtLast:
     
