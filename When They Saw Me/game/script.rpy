@@ -482,15 +482,13 @@ label AloneAtLast:
 
     Logan "{i}He then went and mimicked how I walked, almost like a cartoonish version of it.{/i}"
 
-    Logan "{i}I know what he’s talking about, but I’m not sure how to react.{/i}"
-
     menu:
         "I know what he’s talking about, but I’m not sure how to react"
 
         "There’s actually a reason why that happens… (+❤ Gavyn)":
             jump TellThestory
 
-        "*Say nothing* (-❤ Gavyn)":
+        "*deflect* (-❤ Gavyn)":
             jump DodgeComment
 
 label TellThestory:
