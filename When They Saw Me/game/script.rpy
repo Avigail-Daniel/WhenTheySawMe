@@ -266,7 +266,9 @@ label GoRockClimbing:
 
         Logan "{i}Gavyn doesn’t seem to like Vic… maybe inviting her was a mistake.{/i}"
         Logan "{i}All three of us got into line and an OL approached us, ready to give us the safety talk and make us sign waivers. Vic seemed to be pretty excited to try to climb everything, and Gavyn kept saying he was the “worst” at rock climbing.{/i}"
-
+    else:
+        Logan "{i}We both got into line and an OL approached us, ready to give us the safety talk and make us sign waivers. Gavyn kept saying he was the “worst” at rock climbing.{/i}"
+    
     Gavyn "I couldn’t even climb out of a hole I dug myself into."
 
     Logan "Then why’d you want to come? Are you trying to get better at it?"
@@ -275,11 +277,12 @@ label GoRockClimbing:
 
     Logan "Oh…"
 
-    Logan "{i}Vic gives me a confused look which I reciprocate.{/i}"
-
-    Logan "{i}That is strange, right? But maybe I’m being too harsh on someone I just met.{/i}"
-
     if vicIsHere:
+        Logan "{i}Vic gives me a confused look which I reciprocate.{/i}"
+        Logan "{i}That is strange, right? But maybe I’m being too harsh on someone I just met.{/i}"
+        
+        ##Vic is about to leave
+
         Logan "{i}Aside from the ambiance of the gym and the occasional comment from Vic, we stood in total silence.{/i}"
 
         Logan "{i}I was just thinking about how much longer this would take when Vic finally broke.{/i}"
@@ -310,7 +313,89 @@ else:
     Logan "{i}I got there and it looked pretty packed. I’m surprised that they could fit all of us into this one lecture hall. At the foot of it was a table covered in various painting supplies.{/i}"
 
 # The Cringey OL Dance 
+    Logan "{i}I spot Gregory, my OL, from across the room and snicker a bit to myself.{/i}"
 
+    Logan "Hey Gregory, let me see you get down!"
+
+    Logan "{i}In an instant, his head swerved towards me, with a look screaming a sassy ‘oh no you didn’t’.{/i}"
+
+    Gregory "No stinkin’ way!"
+
+    Logan "I SAID"
+
+    "{b}Logan and the crowd of other new students{/b}" "LET ME SEE YOU GET DOWN!"
+
+    Logan "{i}He looked at me, sighed, and followed through with the orientation tradition they told us about.{/i}"
+
+    Gregory "Ok!"
+
+    Logan "{i}What followed can only be described as “cringe-worthy dance sesh”.{/i}"
+
+    "{b}Logan and the crowd of other new students{/b}" "D! O! W! N! That’s the way we get down! *clap clap* D! O! W! N! That’s the way we get down! *clap clap*"
+
+    Logan "{i}After… that disaster happened, he walked up to me, eager to do something else that wasn’t dancing in front of a crowd of onlookers.{/i}"
+
+    Gregory "So did you come here just to spoil my evening or do you actually plan on painting?"
+
+    Logan "Yeah, I’m here to paint! Has anyone else from the group shown up yet??"
+
+    Gregory "Yeah Gavyn’s around here somewhere. I think- oh there he is. He’s in the back row."
+
+    Logan "Oh… He’s here?"
+
+#Gavyn scares Logan 
+    Logan "{i}Gregory falls silent for a minute and I barely have time to register wha—{/i}"
+
+    Gavyn "BOO!"
+
+    Logan "AH!"
+
+    Logan "{i}My heart nearly left my soul as I felt Gavyn grab my shoulders from behind.{/i}"
+
+    Logan "Hi- uh… wh… um what are you doing here?"
+
+    Gavyn "Painting."
+
+    Logan "I mean… I guess… Just cause you said you were going to go rock climbing."
+
+    Logan "{i}Gavyn waves his hand at me dismissively.{/i}"
+# Gavyn and Vic Meet 
+    if vicIsHere:
+        Gavyn "Who is this?"
+
+        Logan "This is my roommate, Vic."
+
+        Logan "I asked her to join us."
+
+        Logan "{i}Gavyn doesn’t say anything…{/i}"
+
+        Logan "{i}I had a feeling this would upset him.{/i}"
+
+        Logan "{i}Maybe I should have let him know sooner that Vic was joining us.{/i}"
+
+        Vic "Hey! Nice to meet you!"
+
+        Gavyn "…"
+
+        Vic "What’s your name?"
+
+        Gavyn "I’m Gavyn."
+
+        Vic "Nice to meet you Gavin!"
+
+        Gavyn "With a 'y'... You have to say it with a 'y'."
+
+        Vic "As opposed to what, a 'g'?"
+
+        Gavyn "No, an 'i'. Are you stupid?"
+
+        Vic "It’s a joke, dingus. Take it or leave it."
+
+        Gavyn "…"
+
+        Vic "Leave it, it is."
+
+        Logan "{i}Gavyn doesn’t seem to like Vic…{/i}"
 
 # Event intro 
     Logan "{i}After a few minutes, the person running the event grabbed a microphone.{/i}"
@@ -324,7 +409,7 @@ else:
 # The gang starts to paint 
 
 if vicIsHere:
-        Logan "{i}Just as soon as they said that, just about everyone started clambering for the free food, so the three of us went to the front of the other line to grab supplies. Vic grabbed a whole set of various colors and brushes with a canvas slung under their arm, Gavyn grabbed some water colors and the corresponding paper, and I settled for the standard canvas and brush.{/i}"
+    Logan "{i}Just as soon as they said that, just about everyone started clambering for the free food, so the three of us went to the front of the other line to grab supplies. Vic grabbed a whole set of various colors and brushes with a canvas slung under their arm, Gavyn grabbed some water colors and the corresponding paper, and I settled for the standard canvas and brush.{/i}"
 
     Logan "{i}We then went to some table in some corner somewhere. Vic seemed to be pretty excited to paint and couldn’t decide on a subject, I settled on trying to do a landscape of some fantasy location, and Gavyn kept saying he was the “worst” at art.{/i}"
 
@@ -355,9 +440,23 @@ if vicIsHere:
     Gavyn "Bye."
 
     Logan "{i}Tension grips my chest as I watch her walk away.{/i}"
+else:
+    Logan "{i}Just as soon as they said that, just about everyone started clambering for the free food, so the two of us went to the front of the other line to grab supplies. Gavyn grabbed some water colors and the corresponding paper and I settled for the standard canvas and brush.{/i}"
+
+    Logan "{i}We then went to some table in some corner somewhere. I settled on trying to do a landscape of some fantasy location, and Gavyn kept saying he was the “worst” at art.{/i}"
+
+    Gavyn "I couldn’t even draw the person I was in love with if they went missing."
+
+    Logan "If you don’t like it so much you don’t have to paint…"
+
+    Logan "And besides, the only way to get better is to keep painting."
+
+    Logan "{i}He gives me a confused and almost disgusted look… Like I was stupid for even suggesting such a thing.{/i}"
+
+    Logan "It’s fine! I’m sure you’re better than you think!"
 
 
 
 
 label AloneAtLast:
-    
+    Narrator "This is the scene where Gavyn will comment on logan's legs"
