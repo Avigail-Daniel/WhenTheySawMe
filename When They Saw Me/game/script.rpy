@@ -10,6 +10,8 @@ define Gavyn = Character("Gavyn")
 
 label start:
 
+    stop music fadeout 3.0
+
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
