@@ -23,6 +23,12 @@ label start:
 
     N "This is the digital implementation of the paper prototype"
 
+    stop music fadeout 3.0
+
+    # Show a background. This uses a placeholder by default, but you can
+    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
+
     #change the color of this text to indicate it is improtant 
     N "Trigger warning: We intend this game to deal with topics such as stalking and manipulation. These aren’t extremely present within the short scope of this prototype, but the scenes do involve characters making comments about the main character’s body."
     
