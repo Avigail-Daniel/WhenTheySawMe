@@ -12,14 +12,18 @@ label start:
 
     scene intro
     
+    N "This is the digital implementation of the paper prototype"
 
-    # These display lines of dialogue.
 
-    Gavyn "You've created a new Ren'Py game."
+    #change the color of this text to indicate it is improtant 
+    N "Trigger warning: We intend this game to deal with topics such as stalking and manipulation. These aren’t extremely present within the short scope of this prototype, but the scenes do involve characters making comments about the main character’s body."
+    
+    N "You play as Logan, a first-year female college student who is going through orientation week."
 
-    Gavyn "Muahahahaha"
+    #Change the size and boldness of this text to emphasise it
+    N "Your main goal is to build healthy relationships with characters."
 
-    # This ends the game.
+    jump scenario_1a
 
     return
 ## for now we have a linear narrative that goes as follows:
