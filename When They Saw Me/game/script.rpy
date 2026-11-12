@@ -601,6 +601,7 @@ label CB:
             jump TheFinalNail
 
 label TheFinalNail:
+    
     Logan "I think I really should head to bed… we’ll get to see each other more tomorrow."
 
     Gavyn "Sure we will."

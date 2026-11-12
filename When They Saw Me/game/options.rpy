@@ -38,7 +38,7 @@ define gui.about = _p("""
 ## or semicolons.
 
 define build.name = "WhenTheySawMe"
-
+define build.itch_project = "avigaildaniel.itch.io/when-they-saw-me"
 
 ## Sounds and music ############################################################
 
