@@ -4,7 +4,7 @@
 # name of the character.
 
 define Gavyn = Character("Gavyn")
-
+define N = Character("Narrator")
 ## START OF STORY ## 
 
 
