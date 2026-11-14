@@ -1,11 +1,4 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define Gavyn = Character("Gavyn")
-define N = Character("Narrator")
-## START OF STORY ## 
+﻿## START OF STORY ## 
 
 
 # This script contains code for the intro squence of the game 

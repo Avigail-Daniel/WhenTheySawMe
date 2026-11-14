@@ -27,6 +27,8 @@ label greek_guru:
     "He obliges, making a few comments about how he doesn't think you'll succeed in finding something for him."
     "After giving the food a shot, he says you did a good job and expresses how thankful he is that you helped him."
     "He now calls you his 'Greek Guru'."
+    
+    $ gavyn_nickname = "Greek Guru"
 
     return
 
@@ -36,6 +38,8 @@ label runaways:
     "He gets excited to go on a little adventure with you to find something he'll like."
     "You guys end up at some generic spot that has chicken tenders and fries."
     "He happily eats his beige slop, gleefully referring to the two of you as 'The Runaways'."
+
+    $ gavyn_nickname = "Runaway"
 
     return
 
@@ -48,6 +52,9 @@ label butterfly:
     "Later on in your relationship, he mentions this moment and makes a comment about how you never do things yourself and you're always offloading him to other people."
     "He now calls you 'Butterfly', because of your socialness."
 
+    
+    $ gavyn_nickname = "Butterfly"
+
     return
 
 
@@ -59,5 +66,7 @@ label miss_independence:
     "He orders whatever and barely touches it."
     "He later complains about how hungry he is and how he totally wasted his money."
     "He assures you it's not your fault, but he kind of wishes he had you help."
+
+    $ gavyn_nickname = "Miss Independence"
 
     return
