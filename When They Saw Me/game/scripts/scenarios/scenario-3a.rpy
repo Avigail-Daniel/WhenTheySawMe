@@ -1,6 +1,6 @@
 label scenario_3a:
     
-    "Gavyn is complaining about his love life. He asks you if you think he’s even datable."
+    "Gavyn is complaining about his love life. He asks you if you think he's even datable."
 
     menu:
         "Reassure him.":
@@ -12,15 +12,18 @@ label scenario_3a:
         "Refuse to answer.":
             jump refuse_answer
     
+    jump scenario_4a
     return
 
 
 label reassure_him:
 
-    "You reassure Gavyn, telling him he’s a handsome enough guy and he seems really nice. He then asks you why you aren't dating him, if you really think that."
+    "You reassure Gavyn, telling him he's a handsome enough guy and he seems really nice. 
+    He then asks you why you aren't dating him, if you really think that."
 
-    "After your hesitation, he says ‘see, it doesn’t matter how great I am, people just don’t like me.’"
+    "After your hesitation, he says 'see, it doesn't matter how great I am, people just don't like me.'"
 
+    jump scenario_4a
     return
 
 
@@ -32,6 +35,7 @@ label playfully_roast:
 
     "He now takes the liberty of returning the favor and playfully points out your insecurities when he gets the chance."
 
+    jump scenario_4a
     return
 
 
@@ -41,7 +45,9 @@ label refuse_answer:
     
     "Gavyn expresses his offense at you not feeling comfortable enough to be honest with him."
 
-    "He still talks about his love life with you occasionally, but punctuates his rambles with ‘but you don’t have to say anything, I know how you feel about that.’"
+    "He still talks about his love life with you occasionally, but punctuates his rambles with 
+    'but you don't have to say anything, I know how you feel about that.'"
 
+    jump scenario_4a
     return
 
