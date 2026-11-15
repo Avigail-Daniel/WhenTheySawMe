@@ -21,6 +21,7 @@ label reassure_him:
 
     "After your hesitation, he says ‘see, it doesn’t matter how great I am, people just don’t like me.’"
 
+    jump scenario_4a
     return
 
 
@@ -32,6 +33,7 @@ label playfully_roast:
 
     "He now takes the liberty of returning the favor and playfully points out your insecurities when he gets the chance."
 
+    jump scenario_4a
     return
 
 
@@ -43,5 +45,6 @@ label refuse_answer:
 
     "He still talks about his love life with you occasionally, but punctuates his rambles with ‘but you don’t have to say anything, I know how you feel about that.’"
 
+    jump scenario_4a
     return
 

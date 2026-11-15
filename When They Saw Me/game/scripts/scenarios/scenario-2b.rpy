@@ -30,6 +30,7 @@ label never_date:
 
     "However, whenever the two of you are alone, he gets weirdly distant and tries to avoid small talk."
 
+    jump scenario_3a
     return
 
 
@@ -47,6 +48,7 @@ label say_nothing:
 
     "Going forward, he immediately blushes any time he sees you, making it awkward for you."
 
+    jump scenario_3a
     return
 
 
@@ -54,6 +56,7 @@ label i_guess:
 
     "Going forward, Robert immediately blushes any time he sees you, making things awkward for you."
 
+    jump scenario_3a
     return
 
 
@@ -65,4 +68,5 @@ label another_point:
 
     "From that point on, every now and then, Robert looks at you expectantly, as if to ask, 'Is this the point?'"
 
+    jump scenario_3a
     return
