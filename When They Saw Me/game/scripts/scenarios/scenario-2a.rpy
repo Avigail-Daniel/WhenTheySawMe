@@ -36,6 +36,7 @@ label decline_food:
 
     "From then on, Person A consistently checks in to make sure you have enough money and that you've eaten for the day."
 
+    jump scenario_1b
     return
 
 
@@ -51,6 +52,7 @@ label repay_food:
 
     "He acts like sharing money is a 'thing' between the two of you."
 
+    jump scenario_1b
     return
 
 
@@ -66,6 +68,7 @@ label accept_food:
 
     "He reminds you that he treats you well by paying for your lunches."
 
+    jump scenario_1b
     return
 
 
@@ -81,4 +84,5 @@ label refuse_help:
 
     "They explain that it's frustrating to see a friend in need who refuses to let their friends lend a hand."
 
+    jump scenario_1b
     return

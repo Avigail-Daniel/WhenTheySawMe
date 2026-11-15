@@ -30,6 +30,7 @@ label help_pick_drink:
 
     "He's so delighted, he starts calling you his 'Drink Darling'"
 
+    jump scenario_1_5b
     return
 
 
@@ -47,6 +48,7 @@ label go_elsewhere:
 
     "He smiles to himself... he seems proud of that nickname"
 
+    jump scenario_1_5b
     return
 
 
@@ -62,6 +64,7 @@ label ask_barista:
 
     Rob "Nonsense! You're like a certified Drink Darling!"
 
+    jump scenario_1_5b
     return
 
 
@@ -81,4 +84,5 @@ label no_time:
     
     "He hands your drink back to you and you continue walking to the event"
 
+    jump scenario_1_5b
     return
