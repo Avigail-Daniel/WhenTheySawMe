@@ -28,17 +28,24 @@ label start:
     return
 ## for now we have a linear narrative that goes as follows:
 
-# scenario 1a
-# scenario 2a
-# scenario 3a
-# scenario 4a
 
-# scenario 1b
+# scenario 1a (Greek Food)
+# scenario 2a (Money)
 
-# scenario 1.5b
-# scenario 1.5a
 
-# scenario 2b
+# scenario 1b (Drinks)
 
-# scenario 2.5a
-# scenario 2.5b
+
+# scenario 1.5b (Nickname boundary setting w/Robbie)
+# scenario 1.5a (Nickname boundary setting w/Gavyn) (NEEDS TO BE WRITTEN)
+
+
+# scenario 2b (Would you date me - R)
+
+
+# scenario 3a (Would you date me - G)
+# scenario 4a (Love song - G)
+
+
+# scenario 3.5a (Date me boundary setting - G)
+# scenario 3.5b (Date me boundary setting - R)
