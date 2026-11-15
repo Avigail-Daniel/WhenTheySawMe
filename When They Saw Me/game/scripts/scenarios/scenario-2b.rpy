@@ -1,4 +1,4 @@
-label would_you_date_me_scenario:
+label scenario_2b:
 
     "Robert is complaining about his love life before turning his focus to you."
 
@@ -42,6 +42,10 @@ label say_nothing:
     Rob "Oh, shoot, not, like, 'timing' timing... I just mean... oh, shoot..."
 
     Rob "You know what I'm saying?"
+
+    Logan "I guess..."
+
+    "Going forward, he immediately blushes any time he sees you, making it awkward for you."
 
     return
 
