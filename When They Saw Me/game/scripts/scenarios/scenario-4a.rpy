@@ -40,7 +40,7 @@ label loved_melody:
     "He often asks to go on more walks, showing you more songs like this one, 
     taking you to similarly remote spots when he does so."
 
-    return
+    jump scenario_3_5a
 
 
 label not_my_taste:
@@ -51,7 +51,7 @@ label not_my_taste:
     "Whenever you two discuss a matter of opinion from now on, he half-playfully states 
     you have no right to speak on account of your \"bad taste.\""
 
-    return
+    jump scenario_3_5a
 
 
 label why_play:
@@ -59,7 +59,9 @@ label why_play:
     "He seems dejected. \"I just wanted to show you something I liked. 
     It really speaks to how I feel about love.\""
 
-    return
+    "Especially when I'm not sure if the feelings are requited"
+    
+    jump scenario_3_5a
 
 
 label intense_words:
@@ -69,4 +71,5 @@ label intense_words:
 
     "When he discovers new songs now, he sends them to you and tries to start up a conversation about the lyrics."
 
-    return
+    
+    jump scenario_3_5a
