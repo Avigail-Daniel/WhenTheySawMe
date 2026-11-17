@@ -28,7 +28,7 @@ label drop_matter:
     "He sounds disappointed, but overall accepting of this outcome."
 
     jump scenario_1_5a
-    return
+    
 
 
 label harsh_response:
@@ -40,7 +40,7 @@ label harsh_response:
     "He promises not to call you 'Drink Darling' again, and follows through."
 
     jump scenario_1_5a
-    return
+    
 
 
 label gentle_response:
@@ -52,4 +52,4 @@ label gentle_response:
     "He promises not to call you 'Drink Darling' again, and follows through."
 
     jump scenario_1_5a
-    return
+    

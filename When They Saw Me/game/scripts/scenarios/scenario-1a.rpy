@@ -30,7 +30,8 @@ label greek_guru:
     
     $ gavyn_nickname = "Greek Guru"
 
-    return
+    jump scenario_2a
+    
 
 
 label runaways:
@@ -41,7 +42,8 @@ label runaways:
 
     $ gavyn_nickname = "Runaway"
 
-    return
+    jump scenario_2a
+    
 
 
 label butterfly:
@@ -55,7 +57,8 @@ label butterfly:
     
     $ gavyn_nickname = "Butterfly"
 
-    return
+    jump scenario_2a
+    
 
 
 label miss_independence:
@@ -69,4 +72,5 @@ label miss_independence:
 
     $ gavyn_nickname = "Miss Independence"
 
-    return
+    jump scenario_2a
+    
