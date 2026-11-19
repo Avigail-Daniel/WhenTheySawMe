@@ -15,8 +15,9 @@ label start:
     N "This is the digital implementation of the paper prototype"
 
 
-    #change the color of this text to indicate it is improtant 
-    N "Trigger warning: We intend this game to deal with topics such as stalking and manipulation. These aren’t extremely present within the short scope of this prototype, but the scenes do involve characters making comments about the main character’s body."
+    #the color of this text is red
+    N "{color=#f00}Trigger warning: We intend this game to deal with topics such as stalking and manipulation.{/color}"
+    N "{color=#f00}These aren’t extremely present within the short scope of this prototype, but the scenes do involve characters making awkward and uncomfortable comments.{/color}"
     
     N "You play as Logan, a first-year female college student who is going through orientation week."
 
