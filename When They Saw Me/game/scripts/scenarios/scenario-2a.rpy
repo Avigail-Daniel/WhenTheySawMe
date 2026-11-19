@@ -1,6 +1,6 @@
 label scenario_2a:
 
-    "You and Person A are waiting in line to check out, warm food in your hands."
+    "You and Gavyn are waiting in line to check out, warm food in your hands."
 
     "As you swipe your card, it makes a noise and declines."
 
@@ -30,11 +30,11 @@ label scenario_2a:
 
 label decline_food:
 
-    "You refuse the offer, telling Person A you'll just eat later or find someplace that takes cash."
+    "You refuse the offer, telling Gavyn you'll just eat later or find someplace that takes cash."
 
     "He nods, and decides he'll just get food with you later. He puts his away now, too."
 
-    "From then on, Person A consistently checks in to make sure you have enough money and that you've eaten for the day."
+    "From then on, Gavyn consistently checks in to make sure you have enough money and that you've eaten for the day."
 
     jump scenario_1b
     return
@@ -78,7 +78,7 @@ label refuse_help:
 
     "You bite the bullet and refuse the help."
 
-    "Person A looks a little offended."
+    "Gavyn looks a little offended."
 
     "Later, they express that they're sorry you don't feel comfortable leaning on them for help."
 
