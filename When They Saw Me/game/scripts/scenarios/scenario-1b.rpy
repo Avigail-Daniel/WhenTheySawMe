@@ -6,9 +6,9 @@ label scenario_1b:
 
     "He whines about it a bit, but there's not a lot of time to get more before your next event."
 
-    "What do you do?"
-
     menu:
+        "What do you do?"
+        
         "Help him pick something out.":
             jump help_pick_drink
 

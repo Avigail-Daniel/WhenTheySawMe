@@ -2,14 +2,15 @@ label scenario_1a:
 
     "You and your whole orientation group are at a Greek Food place on campus"
     "One of the guys you've been chatting with walks over to find you"
-    Gavyn "Hey there! I'm Gavyn" 
+    Logan "Oh, hey Gavyn" 
     "He chats with you while you're trying to pick out your own food and tells you he's never had Greek food before."
     "He makes some passing remarks stating he's not sure how he'll feel about it."
     "It's the only thing available, though."
 
-    "What do you do?"
 
     menu:
+        "What do you do?"
+        
         "Help him pick something out...":
             jump greek_guru
 

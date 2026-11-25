@@ -12,9 +12,9 @@ label scenario_2a:
 
     "You politely decline, motioning to put the food away, but he insists."
 
-    "How do you respond?"
-
     menu:
+        "How do you respond?"
+
         "No thanks, I'll eat later.":
             jump decline_food
 

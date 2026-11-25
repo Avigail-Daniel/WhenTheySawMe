@@ -4,9 +4,9 @@ label scenario_1_5b:
 
     "You ask him to stop, and he starts apologizing nonstop."
 
-    "What do you do?"
-
     menu:
+        "What do you do?"
+
         "Drop the matter.":
             jump drop_matter
 
